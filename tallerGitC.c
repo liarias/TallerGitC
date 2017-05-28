@@ -35,8 +35,7 @@ int main(int argc, char *argv[]) {
 		        	
 		valido = scanf("%d", &num);
 		while(!valido){
-			printf("Ingrese caracter valido(numero):");
-			scanf("%[^\n]s",pal1);	        	
+			printf("Ingrese caracter valido(numero):");	        	
 			valido = scanf("%d", &num);
 		}		
 		cifrar(pal1,num);
