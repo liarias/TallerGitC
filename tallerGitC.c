@@ -77,7 +77,6 @@ void cifrarMorse (char palabra[],int llave){
 	for(i=0;i<strlen(palabra);i++){
 		if(isdigit(palabra[i])){
 			n=palabra[i]-48;
-printf("%d",n);
 			strcat(mor,morseNum[n]);			
 		}
 		else{
@@ -88,7 +87,7 @@ printf("%d",n);
 		
 			else{
 				m=palabra[i]-97+llave;
-printf("%d",m);
+
 				strcat(mor,morseLetra[m]);	
 			}
 		
