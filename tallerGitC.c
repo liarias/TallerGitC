@@ -9,6 +9,15 @@ void cifrar(char palabra[],int llave);
 char abc[27] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 		       'o','p','q','r','s','t','u','v','w','x','y','z',' '};
 
+char morseLetra[27][5]={".-","-...","-.-.","-..",".","..-.","--.",
+                "....","..",".---","-.-",".-..","--","-.",
+                "---",".--.","--.-",".-.","...","-","..-",
+                "...-",".--","-..-","-.--","--..",,"/"};
+
+
+char morseNum[11][5]={"-----",".----","..---","...--","....-",".....",
+"-....","--...","---..","----.","/"};
+
 int main(int argc, char *argv[]) {
 	
 	if (argc == 1) {	
@@ -57,5 +66,9 @@ void cifrar(char palabra[],int llave){
 	printf("Mensaje cifrado: %s",nPalabra);
 	printf("\n");
 
+}
+
+void cifrar (char palabra[]){
+	
 }
 
