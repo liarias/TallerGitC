@@ -26,13 +26,19 @@ int main(int argc, char *argv[]) {
 	if (argc == 1) {	
 		char pal1[LONG];
 
-		int num;
+		int num,valido;
 		printf("Cifrado ciclico \n");
         	printf("Ingrese mensaje a cifrar: ");
         	scanf("%[^\n]s",pal1);
 
         	printf("Ingrese la llave numerica: ");
-        	scanf("%d", &num);
+		        	
+		valido = scanf("%d", &num);
+		while(!valido){
+			printf("Ingrese caracter valido(numero):");
+			scanf("%[^\n]s",pal1);	        	
+			valido = scanf("%d", &num);
+		}		
 		cifrar(pal1,num);
 		cifrarMorse(pal1,num);		
 	}
@@ -86,7 +92,7 @@ void cifrarMorse (char palabra[],int llave){
 			}
 		
 			else{
-				m=palabra[i]-97+llave;
+				m=palabra[i]-97+(llave%26);
 
 				strcat(mor,morseLetra[m]);	
 			}
